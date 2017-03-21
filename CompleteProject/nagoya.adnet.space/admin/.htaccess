@@ -1,0 +1,7 @@
+RewriteEngine on
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([A-z0-9-_]+)$ index.php?act=$1 [L]
+RewriteRule ^([A-z0-9-_]+)/([0-9]+)$ index.php?act=$1&page=$2 [L]
+RewriteRule ^([A-z0-9-_]+)/id=([0-9]+)$ index.php?act=$1&id=$2 [L]
